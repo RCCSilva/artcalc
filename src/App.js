@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import * as S from './App.styles';
+import { InputDistance } from './components/InputDistance/InputDistance';
+import { ResultBox } from './components/ResultBox';
 
 function App() {
   const [distance, setDistance] = useState(0)
@@ -8,10 +11,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-     <input type="number" value={distance} onChange={(event) => setDistance(event.target.value)}/>
-     <div>{calculateAngle()}</div>
-    </div>
+    <S.Container>
+     <InputDistance type="number" value={distance} onChange={setDistance}/>
+     <ResultBox value={calculateAngle()} />
+    </S.Container>
   );
 }
 
