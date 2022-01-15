@@ -13,4 +13,5 @@ export const Label = styled.label`
 export const Input = styled.input`
   font-size: 2rem;
   margin: 1rem 0rem;
+  width: 100%;
 `

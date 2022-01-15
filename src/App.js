@@ -7,7 +7,7 @@ function App() {
   const [distance, setDistance] = useState(0)
 
   const calculateAngle = () => {
-    return 1004 - (distance * 0.24)
+    return (1004 - (distance * 0.24)).toFixed(2)
   }
 
   return (
