@@ -56,10 +56,15 @@ function App() {
   }
 
   const handleDistance = (newDistance) => {
+    if (newDistance === '') {
+      setDistance('')
+      return
+    }
+
     const d = parseInt(newDistance)
 
     if (isNaN(d)) {
-      setDistance('')
+      return
     }
 
     if (d > 1600) {
